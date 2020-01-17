@@ -9,7 +9,7 @@ class CardContainer extends React.Component {
     graphData = {
         labels: [],
         datasets: [{
-            label: '# of Searches',
+            label: '# of Searches by Country',
             data: [],
             backgroundColor: [
                 'rgba(102, 0, 0, 0.2)',
@@ -81,7 +81,9 @@ class CardContainer extends React.Component {
         console.log(this.graphData);
         return (
             <div className='cards-container'>
-                <Bar data={this.graphData} />
+                <div className='graph'>
+                    <Bar data={this.graphData} />
+                </div>
                 {/* map through state data to create cards for each player with info. */}
                 {this.state.data.map(player => {
                     return <PlayerCard name={player.name} searches={player.searches} country={player.country} key={player.id} />

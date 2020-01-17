@@ -252,3 +252,9 @@ img {
   width: 20px;
   margin-right: 5px;
 }
+
+.graph {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem 10%;
+}
