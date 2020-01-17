@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import PlayerCard from './PlayerCard';
 
 class CardContainer extends React.Component {
     state = {data: []};
@@ -21,12 +23,15 @@ class CardContainer extends React.Component {
                 console.log(err);
             });
     }
-    
+
     render() {
         return (
             <div className='cards-container'>
                 {/* map through state data to create cards for each player with info. */}
+                <PlayerCard name='Bob McBobbersons' country='Yo mama house' searches={100} />
             </div>
         );
     }
 }
+
+export default CardContainer;
