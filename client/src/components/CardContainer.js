@@ -28,7 +28,9 @@ class CardContainer extends React.Component {
         return (
             <div className='cards-container'>
                 {/* map through state data to create cards for each player with info. */}
-                <PlayerCard name='Bob McBobbersons' country='Yo mama house' searches={100} />
+                {this.state.data.map(player => {
+                    return <PlayerCard name={player.name} searches={player.searches} country={player.country} key={player.id} />
+                })}
             </div>
         );
     }
